@@ -1,3 +1,8 @@
-firstProgram/obj/
-firstProgram/bin/
-basic.sln
+# Ignore everything by default
+*
+
+# Allow .cs files
+!*.cs
+
+# Allow .gitignore itself
+!.gitignore
