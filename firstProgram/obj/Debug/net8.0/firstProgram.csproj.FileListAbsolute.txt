@@ -1,0 +1,15 @@
+/home/xuanhau/CodeSpace/C/basic/firstProgram/bin/Debug/net8.0/firstProgram
+/home/xuanhau/CodeSpace/C/basic/firstProgram/bin/Debug/net8.0/firstProgram.deps.json
+/home/xuanhau/CodeSpace/C/basic/firstProgram/bin/Debug/net8.0/firstProgram.runtimeconfig.json
+/home/xuanhau/CodeSpace/C/basic/firstProgram/bin/Debug/net8.0/firstProgram.dll
+/home/xuanhau/CodeSpace/C/basic/firstProgram/bin/Debug/net8.0/firstProgram.pdb
+/home/xuanhau/CodeSpace/C/basic/firstProgram/obj/Debug/net8.0/firstProgram.GeneratedMSBuildEditorConfig.editorconfig
+/home/xuanhau/CodeSpace/C/basic/firstProgram/obj/Debug/net8.0/firstProgram.AssemblyInfoInputs.cache
+/home/xuanhau/CodeSpace/C/basic/firstProgram/obj/Debug/net8.0/firstProgram.AssemblyInfo.cs
+/home/xuanhau/CodeSpace/C/basic/firstProgram/obj/Debug/net8.0/firstProgram.csproj.CoreCompileInputs.cache
+/home/xuanhau/CodeSpace/C/basic/firstProgram/obj/Debug/net8.0/firstProgram.sourcelink.json
+/home/xuanhau/CodeSpace/C/basic/firstProgram/obj/Debug/net8.0/firstProgram.dll
+/home/xuanhau/CodeSpace/C/basic/firstProgram/obj/Debug/net8.0/refint/firstProgram.dll
+/home/xuanhau/CodeSpace/C/basic/firstProgram/obj/Debug/net8.0/firstProgram.pdb
+/home/xuanhau/CodeSpace/C/basic/firstProgram/obj/Debug/net8.0/firstProgram.genruntimeconfig.cache
+/home/xuanhau/CodeSpace/C/basic/firstProgram/obj/Debug/net8.0/ref/firstProgram.dll
