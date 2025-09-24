@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Numerics;
+using System.Text;
 using System.Threading;
 
 namespace algorithms
@@ -37,7 +38,7 @@ namespace algorithms
             while (i * i <= n)
             {
                 if (n % i <= 0) return false;
-                i += 2; 
+                i += 2;
             }
             return true;
         }
@@ -71,13 +72,93 @@ namespace algorithms
             }
             return sum;
         }
-        // Generate the first n numbers in the Fibonacci sequence.
-        // Write a program to check if a string is a palindrome, ignoring spaces, punctuation, and case.
-        // Implement the bubble sort algorithm to sort an array of integers in ascending order.
-        // Compute the Greatest Common Divisor (GCD) of two numbers using the Euclidean algorithm.
-        // Write a program to count the number of vowels (a, e, i, o, u) in a given string, ignoring case.
-        // Implement the binary search algorithm to find an element in a sorted array and return its index or indicate if it’s not found.
 
+        // Generate the first n numbers in the Fibonacci sequence.
+        public BigInteger[] fristFibonacciNumber(int n)
+        {
+            if (n <= 0) return new BigInteger[0];
+            if (n == 1) return new BigInteger[]{0};
+            if (n == 2) return new BigInteger[] { 0, 1 };
+            BigInteger[] result = new BigInteger[n];
+            result[0] = 0; result[1] = 1;
+            for (int i = 2 ; i < n; i++)
+            {
+                result[i] = result[i - 1] + result[i - 2];
+            }
+            return result;
+        }
+        public string printArray(BigInteger[] arr)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (BigInteger i in arr)
+            {
+                sb.Append(i + " ,");
+            }
+            return sb.ToString();
+        }
+        // Write a program to check if a string is a palindrome, ignoring spaces, punctuation, and case.
+        public bool isPalindrome(string s)
+        {
+            int left = 0;
+            int right = s.Length - 1;
+            while (left < right)
+            {
+                while (left < right && !char.IsLetterOrDigit(s[left])) left++;
+                while (left < right && !char.IsLetterOrDigit(s[right])) right--;
+                if (char.ToLower(s[left]) != char.ToLower(s[right])) return false;
+                left++;
+                right--;
+            }
+            return true;
+        }
+        // Implement the bubble sort algorithm to sort an array of integers in ascending order.
+        public int[] bubbleSort(int[] arr)
+        {
+            int n = arr.Length;
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = 0; j < n - i - 1; j++)
+                {
+                    if (arr[j] > arr[j + 1])
+                    {
+                        int temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+        // Compute the Greatest Common Divisor (GCD) of two numbers using the Euclidean algorithm.
+        public int gcd(int a, int b)
+        {
+            if (b == 0) return a;
+            return gcd(b, a % b);
+        }
+        // Write a program to count the number of vowels (a, e, i, o, u) in a given string, ignoring case.
+        public int countVowels(string s)
+        {
+            int count = 0;
+            foreach (char c in s.ToLower())
+            {
+                if ("aeiou".IndexOf(c) >= 0) count++;
+            }
+            return count;
+        }
+        // Implement the binary search algorithm to find an element in a sorted array and return its index or indicate if it’s not found.
+        public int binarySearch(int[] arr, int target)
+        {
+            int left = 0;
+            int right = arr.Length - 1;
+            while (left <= right)
+            {
+                int mid = left + (right - left) / 2;
+                if (arr[mid] == target) return mid;
+                if (arr[mid] < target) left = mid + 1;
+                else right = mid - 1;
+            }
+            return -1; // not found
+        }
 
 
         // write a higher order function that calculate the finished time as a mili second 
@@ -93,10 +174,10 @@ namespace algorithms
         {
             Program p = new Program();
 
-            Console.WriteLine(p.MeasureExecutionTime(p.factorialIterative, 0));
-            Console.WriteLine(p.MeasureExecutionTime(p.factorialRecursive, 0));
-            Console.WriteLine(p.reverseString("Hello, World!"));
-
+            // Console.WriteLine(p.MeasureExecutionTime(p.factorialIterative, 0));
+            // Console.WriteLine(p.MeasureExecutionTime(p.factorialRecursive, 0));
+            // Console.WriteLine(p.reverseString("Hello, World!"));
+            Console.WriteLine(p.printArray(p.fristFibonacciNumber(50)));
         }
     }
 
