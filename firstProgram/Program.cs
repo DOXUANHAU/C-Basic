@@ -62,6 +62,7 @@ namespace algorithms
         }
 
         // Write a program to calculate the sum of all elements in an integer array.
+
         public int sumArray(int[] arr)
         {
             int sum = 0;
